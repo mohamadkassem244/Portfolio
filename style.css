@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.main .skills__container .skill, .header .nav-right, .header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .home__data a button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2.5rem;
+}
+.main .home__data a button:hover {
+  background-color: rosybrown;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -24,31 +39,39 @@ body {
   font-family: Poppins;
 }
 
+.section-title {
+  text-align: center;
+}
+
 .header {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
 }
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.header .nav {
   margin: 0 auto;
   height: 70px;
   max-width: 1024px;
   background-color: chocolate;
 }
-.nav-mid ul {
+.header .nav-left a {
+  color: black;
+  font-size: 1.2rem;
+}
+.header .nav-mid {
+  margin: 0 auto;
+}
+.header .nav-mid ul {
   display: flex;
   gap: 1.3rem;
 }
-.nav-mid ul li {
+.header .nav-mid ul li {
   position: relative;
   font-size: 1.2rem;
 }
-.nav-mid ul li::after {
+.header .nav-mid ul li::after {
   position: absolute;
   content: "";
   width: 0;
@@ -58,6 +81,121 @@ body {
   background-color: black;
   transition: width 0.3s ease;
 }
-.nav-mid ul li:hover::after {
+.header .nav-mid ul li:hover::after {
   width: 100%;
+}
+.header .nav-mid ul li a {
+  color: black;
+}
+.header .nav-right .bars {
+  display: none;
+  font-size: 1.6rem;
+}
+
+.main {
+  margin-top: calc(70px + 0.1rem);
+}
+.main .home {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: cadetblue;
+}
+.main .home__data h1 {
+  font-size: 32px;
+}
+.main .home__data a button {
+  font-size: 1.1rem;
+}
+.main .home__social a {
+  color: black;
+  font-size: 2rem;
+}
+.main .home__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+}
+.main .home__img img {
+  height: 100%;
+}
+.main .about {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: gray;
+}
+.main .about__container {
+  display: flex;
+}
+.main .about__container__img {
+  width: 700px;
+}
+.main .about__container__img img {
+  width: 100%;
+}
+.main .about__container__data h2 {
+  color: black;
+}
+.main .about__container__data p {
+  color: black;
+}
+.main .skills {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #272b22;
+}
+.main .skills__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem;
+}
+.main .skills__container .skill {
+  height: 50px;
+}
+.main .skills__container .skill img {
+  height: 100%;
+}
+.main .skills__container .skill h3 {
+  color: aqua;
+  margin-left: 0.5rem;
+}
+.main .projects {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #3a153f;
+}
+.main .projects__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3rem;
+}
+.main .projects__container .project__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.main .projects__container .project p {
+  color: violet;
+}
+.main .contact {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #553f03;
+}
+.main .contact__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 50%;
+}
+.main .contact__container input[type=text], .main .contact__container input[type=email] {
+  background-color: darkolivegreen;
+}
+.main .contact__container input[type=submit] {
+  background-color: firebrick;
+  width: 40%;
+  align-self: flex-end;
 }/*# sourceMappingURL=style.css.map */

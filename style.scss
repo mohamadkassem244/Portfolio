@@ -4,60 +4,235 @@
 body {
     background-color: $body-color;
     font-family: $body-font;
-    
+}
+
+.section-title{
+    text-align: center;
 }
 
 .header{
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
+
+    .nav {
+        @extend %center;
+        margin: 0 auto;
+        height: $nav-height;
+        max-width: $max-width;
+        background-color: chocolate;
+    
+        &-left{
+            & a{
+                color: black;
+                font-size: 1.2rem;
+            }
+            
+        }
+    
+        &-mid{
+            margin: 0 auto;
+            & ul{
+                display: flex;
+                gap: 1.3rem;
+                & li{
+                    position: relative;
+                    font-size: 1.2rem;
+    
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        height: 0.18rem;
+                        left: 0;
+                        top: 2rem;
+                        background-color: black;
+                        transition: width 0.3s ease;
+                    }
+    
+                    &:hover{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+    
+                    & a{
+                        color: black;
+                    }
+    
+                }
+            }
+        }
+    
+        &-right{
+    
+           @extend %center;
+    
+            & .bars{
+                display: none;
+                font-size: 1.6rem;
+            }
+            
+        }
+    }
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 70px;
-    max-width: 1024px;
-    background-color: chocolate;
+.main{
+    margin-top: calc($nav-height + 0.1rem);
+    
+    
+    & .home{
+        position: relative;
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: cadetblue;
 
-    &-left{
-        
-    }
+        &__data{
+            & h1{
+                font-size: 32px;
+            }
 
-    &-mid{
-        & ul{
-            display: flex;
-            gap: 1.3rem;
-
-            & li{
-                position: relative;
-                font-size: 1.2rem;
-
-                &::after{
-                    position: absolute;
-                    content: '';
-                    width: 0;
-                    height: 0.18rem;
-                    left: 0;
-                    top: 2rem;
-                    background-color: black;
-                    transition: width 0.3s ease;
+            & a{
+                & button{
+                    @extend %button;
+                    font-size: 1.1rem;
                 }
+            }
+        }
 
-                &:hover{
-                    &::after{
-                        width: 100%;
-                    }
-                }
+        &__social{
+            & a{
+                color: black;
+                font-size: 2rem;
+            }
+            
+        }
 
+        &__img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 260px;
+
+            & img{
+                height: 100%;
             }
         }
     }
 
-    &-right{
-        
+    & .about{
+
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: gray;
+
+        &__container{
+            display: flex;
+
+            &__img{
+                width: 700px;
+    
+                & img{
+                    width: 100%;
+                }
+            }
+
+            &__data{
+                & h2{
+                    color: black;
+                }
+
+                & p{
+                    color: black;
+                }
+            }
+        }
+
     }
+
+    & .skills{
+
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: #272b22;
+
+        &__container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0.3rem;
+
+            & .skill{
+                @extend %center;
+                height: 50px;
+                & img{
+                    height: 100%;
+                }
+                & h3{
+                    color: aqua;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+
+    }
+
+    & .projects{
+
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: #3a153f;
+
+        &__container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 0.3rem;
+
+            & .project{
+
+                &__img{
+                    & img{
+                        object-fit: contain;
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                    }
+                }
+                & p{
+                    color: violet;
+                }
+            }
+           
+        }
+
+    }
+
+    & .contact{
+
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: #553f03;
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 50%;
+
+            & input[type=text], input[type=email]{
+                background-color: darkolivegreen;
+            }
+
+            & input[type=submit] {
+                background-color: firebrick;
+                width: 40%;
+                align-self: flex-end;
+            }
+        }
+    }
+
 }
+
+
+

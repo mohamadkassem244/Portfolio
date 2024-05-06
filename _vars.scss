@@ -1,2 +1,21 @@
 $body-color: #ccc;
 $body-font: Poppins;
+
+$nav-height: 70px;
+$max-width: 1024px;
+
+%center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%button{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2.5rem;
+
+    &:hover{
+        background-color: rosybrown;
+    }
+}
