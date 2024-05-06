@@ -1,7 +1,63 @@
 @import 'vars';
 @import 'utilities';
 
-body{
+body {
     background-color: $body-color;
     font-family: $body-font;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 70px;
+    max-width: 1024px;
+    background-color: chocolate;
+
+    &-left{
+        
+    }
+
+    &-mid{
+        & ul{
+            display: flex;
+            gap: 1.3rem;
+
+            & li{
+                position: relative;
+                font-size: 1.2rem;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 0.18rem;
+                    left: 0;
+                    top: 2rem;
+                    background-color: black;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-right{
+        
+    }
 }
