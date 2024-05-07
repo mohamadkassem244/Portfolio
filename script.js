@@ -1,7 +1,7 @@
 document.getElementById("current-year").innerHTML = new Date().getFullYear();
 
 
-function set_active_section() {
+function setActiveNavItem() {
   const navHeight = document.querySelector('.header').offsetHeight;
   const scrollPosition = window.scrollY + navHeight;
   
@@ -18,7 +18,7 @@ function set_active_section() {
   });
 }
 
-window.addEventListener('scroll', set_active_section());
+window.addEventListener('scroll', setActiveNavItem);
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
