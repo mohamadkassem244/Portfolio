@@ -373,7 +373,7 @@ body {
                 height: 6rem;
             }
     
-            & input[type=submit] {
+            & .submit-button {
                 @extend %button;
                 padding: 1rem 2.25rem;
                 font-size: 1rem;

@@ -65,7 +65,7 @@ a {
   justify-content: center;
 }
 
-.main .contact__container input[type=submit], .main .home__container__data a button, .header .nav-right .icon-theme {
+.main .contact__container .submit-button, .main .home__container__data a button, .header .nav-right .icon-theme {
   border: none;
   border-radius: 0.5rem;
   background-color: var(--font-color);
@@ -73,7 +73,7 @@ a {
   font-weight: 900;
   text-align: center;
 }
-.main .contact__container input[type=submit]:hover, .main .home__container__data a button:hover, .header .nav-right .icon-theme:hover {
+.main .contact__container .submit-button:hover, .main .home__container__data a button:hover, .header .nav-right .icon-theme:hover {
   background-color: var(--span-font-color);
   color: var(--font-color);
 }
@@ -417,7 +417,7 @@ body {
 .main .contact__container textarea {
   height: 6rem;
 }
-.main .contact__container input[type=submit] {
+.main .contact__container .submit-button {
   padding: 1rem 2.25rem;
   font-size: 1rem;
 }
