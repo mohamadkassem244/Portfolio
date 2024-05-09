@@ -17,9 +17,9 @@
     <div class="header">
         <div class="nav">
             <div class="nav-left">
-                <a href="#">Mohamad</a>
+                <a>Mohamad</a>
             </div>
-            <div class="nav-mid">
+            <div class="nav-mid" id="nav-mid-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -29,16 +29,19 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <div class="language">
-                    <select>
-                        <option value="en">Eng</option>
-                        <option value="ar">Spanish</option>
-                        <option value="fr">French</option>
-                    </select>
-                </div>
-
-                <div class="bars">
-                    <i class="fa-solid fa-bars"></i>
+                <!-- 
+                    <div class="language">
+                        <select>
+                            <option value="en">Eng</option>
+                            <option value="ar">Spanish</option>
+                            <option value="fr">French</option>
+                        </select>
+                    </div>
+                -->
+                
+                <button class="icon-theme" id="mode-toggle-btn"><i class="fa-regular fa-lightbulb"></i></button>
+                <div class="bars" onclick="toggleSidebar()">
+                    <i id="bars-icon" class="fa-solid fa-bars"></i>
                 </div>
 
             </div>
@@ -48,21 +51,26 @@
     <div class="main">
 
         <div class="home" id="home">
-            <div class="home__data">
-                <h1 class="home__title">
-                    Hi,<br>
-                    I'm <span>Mohamad</span><br>
-                    <span id="developer-type"></span> Developer
-                </h1>
-                <a href="#"><button><i class="fa-solid fa-file-arrow-down"></i> Download CV</button></a>
-            </div>
 
-            <div class="home__social">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="home__container">
+                <div class="home__container__data">
+                    <h1 class="home__title">
+                        Hi,<br>
+                        I'm <span>Mohamad</span><br>
+                        <span id="developer-type"></span> Developer
+                    </h1>
+                    <a href="./assets/MohamadKassemCV.pdf" download target="_blank">
+                        <button><i class="fa-solid fa-file-arrow-down"></i> Download CV</button>
+                    </a>
+                </div>
+    
+                <div class="home__social">
+                    <a href="https://github.com/mohamadkassem244" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamad-kassem-1b081227b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mohamadkassem"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mohamadkassem244" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/+96176013371" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
 
             <div class="home__img">
@@ -86,6 +94,8 @@
 
         <div class="skills" id="skills">
             <h2 class="section-title">Skills</h2>
+
+            <h3 class="skills-type">Web Technologies / Frameworks</h3>
             <div class="skills__container">
                 <div class="skill">
                     <img src="./assets/skills/html5.png">
@@ -104,12 +114,122 @@
                     <h3>PHP</h3>
                 </div>
                 <div class="skill">
+                    <img src="./assets/skills/laravel.png">
+                    <h3>Laravel</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/jquery.png">
+                    <h3>jQuery</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/react.png">
+                    <h3>React</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/sass.png">
+                    <h3>Sass</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/bootstrap.png">
+                    <h3>Bootstrap 5</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/nodejs.png">
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/restapi.png">
+                    <h3>RestAPI</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/expressjs.png">
+                    <h3>Express.js</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/json.png">
+                    <h3>JSON</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/ajax.png">
+                    <h3>AJAX</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/oop.png">
+                    <h3>OOP</h3>
+                </div>
+            </div>
+
+            <h3 class="skills-type">Databases</h3>
+            <div class="skills__container">
+                <div class="skill">
+                    <img src="./assets/skills/mongodb.png">
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill">
                     <img src="./assets/skills/mysql.png">
                     <h3>MySQL</h3>
                 </div>
+            </div>
+            <h3 class="skills-type">Programming Languages</h3>
+            <div class="skills__container">
                 <div class="skill">
-                    <img src="./assets/skills/laravel.png">
-                    <h3>Laravel</h3>
+                    <img src="./assets/skills/java.png">
+                    <h3>Java</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/javascript.png">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/php.png">
+                    <h3>PHP</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/csharp.png">
+                    <h3>C#</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/c++.png">
+                    <h3>C++</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/c.png">
+                    <h3>C</h3>
+                </div>
+            </div>
+            <h3 class="skills-type">Development Environment and Tools</h3>
+            <div class="skills__container">
+                <div class="skill">
+                    <img src="./assets/skills/xampp.png">
+                    <h3>XAMPP</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/visualstudiocode.png">
+                    <h3>Visual Studio Code</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/visualstudio.png">
+                    <h3>Visual Studio</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/postman.png">
+                    <h3>Postman</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/git.png">
+                    <h3>Git</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/github.png">
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/linux.png">
+                    <h3>Linux</h3>
+                </div>
+                <div class="skill">
+                    <img src="./assets/skills/unity.png">
+                    <h3>Unity</h3>
                 </div>
             </div>
         </div>
@@ -117,15 +237,15 @@
         <div class="projects" id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects__container">
-                <div class="project">
+                <a href="https://github.com/mohamadkassem244" target="_blank" class="project">
                     <div class="project__img"><img src="./assets/IMG_0176.jpg"></div>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
-                </div>
+                </a>
 
-                <div class="project">
+                <a href="https://github.com/mohamadkassem244" target="_blank" class="project">
                     <div class="project__img"><img src="./assets/IMG_0176.jpg"></div>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -144,16 +264,17 @@
     <div class="footer">
         <h2>Mohamad Kassem</h2>
         <div class="footer__social">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/mohamadkassem244" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamad-kassem-1b081227b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/mohamadkassem"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/mohamadkassem244" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/+96176013371" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-        <h2>mohamadkassem244@gmail.com</h2>
+        <h2><a href="mailto:mohamadkassem244@gmail.com">mohamadkassem244@gmail.com</a></h2>
         <p>&copy; <span id="current-year"></span> Mohamad Kassem. All rights reserved</p>
     </div>
 
 <script src="./script.js"></script>
+<script src="./theme.js"></script>
 </body>
 </html>
