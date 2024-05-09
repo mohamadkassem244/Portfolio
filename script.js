@@ -47,6 +47,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2000,
+  delay: 200,
+});
+
+
+sr.reveal('.home__data, .about__container__img, .section-title', {});
+sr.reveal('.home__img, .about__container__data, .skills__container, .projects__container, .contact__container', { delay: 400 });
+sr.reveal('.home__social a, .footer__social a', { interval: 200 });
+
 
 
 var developerTypeSpan = document.getElementById("developer-type");
