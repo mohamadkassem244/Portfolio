@@ -13,6 +13,15 @@ function toggleSidebar() {
   }
 }
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if(isMobile){
+  var images = document.querySelectorAll('.skill img');
+  images.forEach(function(img){
+      img.style.display = 'none';
+  });
+}
+
 
 document.getElementById("current-year").innerHTML = new Date().getFullYear();
 
