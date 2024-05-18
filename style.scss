@@ -219,7 +219,7 @@ body {
             display: flex;
             &__img{
                 @extend %center;
-                width: 50%;
+                flex: 1;
         
                 & img{
                     width: 80%;
@@ -230,7 +230,7 @@ body {
             }
 
             &__data{
-                width: 50%;
+                flex: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -240,9 +240,13 @@ body {
                 }
 
                 & p{
-                    font-size: 1rem;
+                    font-size: 1.3rem;
                     color: var(--font-color);
                 }
+            }
+            @media only screen and (max-width: 992px) {
+                flex-direction: column;
+                gap: 2rem;
             }
         }
 
