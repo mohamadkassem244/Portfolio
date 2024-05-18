@@ -380,6 +380,7 @@ body {
   border-radius: 8px;
 }
 .main .projects__container .project p {
+  text-align: center;
   font-size: 0.9rem;
   color: var(--font-color);
 }

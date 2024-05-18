@@ -10,7 +10,7 @@ else{
   const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2000,
+    duration: 1200,
     delay: 200,
   });
   
